@@ -8,14 +8,19 @@ This repository contains the full source code, data, and evaluation results for 
 ## Repository Structure:
 .
 ├── Enhanced_RAG_system/
-│   ├── Enhanced_RAG.ipynb
-│   ├── ragas_dataset_enhanced_RAG.csv
-│   └── ragas_results.csv          
+│   ├── code/
+│   │   └── Enhanced_RAG.ipynb
+│   ├── evaluation/
+│   │   ├── ragas_dataset_enhanced_RAG.csv
+│   │   ├── ragas_results.csv
+│   │   └── ragas_results/
 │
 ├── Naive_RAG_system/
-│   ├── Naive_RAG.ipynb
-│   ├── ragas_input_data_naive_rag.csv
-│   └── ragas_naive_results.csv
+│   ├── code/
+│   │   └── Naive_RAG.ipynb
+│   ├── evaluation/
+│   │   ├── ragas_input_data_naive_rag.csv
+│   │   └── ragas_naive_results.csv
 │
 ├── test_cases.py
 └── README.md
