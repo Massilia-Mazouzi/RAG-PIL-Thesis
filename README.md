@@ -25,11 +25,11 @@ This repository contains the full source code, data, and evaluation results for 
 ## Folder and File Descriptions:
 
 1/Naive_RAG_system/
-Naive_RAG.ipynb — Full implementation of the baseline RAG pipeline using MiniLM embeddings and no metadata filtering.
+Naive_RAG.ipynb — Full implementation of the baseline RAG pipeline using recursive chunking, all-MiniLM-L6-v2 embeddings and no metadata filtering.
 
-ragas_input_data_naive_rag.csv — Test queries with reference answers and expected documents used for RAGAS evaluation.
+ragas_input_data_naive_rag.csv — Test queries with the system's answers and the retrieved chunks alongside the reference answers used as the ground_truth by the RAGAS framework.
 
-ragas_naive_results.csv — Raw RAGAS metric scores for the naive system.
+ragas_naive_results.csv — Raw RAGAS metric scores for the naive syste and its performance on each one of the 50 test queries across six RAGAS metrics:Context Relevance, Context Recall, Faithfulness, Answer Relevance, Correctness, and Semantic Similarity.
 
 2/Enhanced_RAG_system/
 Enhanced_RAG.ipynb — Final implementation of the enhanced RAG pipeline with:
@@ -38,11 +38,11 @@ Medication name identification
 
 Metadata filtering
 
-French-specific embeddings (Solon-base)
+French-specific embeddings (OrdalieTech/Solon-embeddings-base-0.1,)
 
-ragas_dataset_enhanced_RAG.csv — The same test queries used for fair comparison.
+ragas_dataset_enhanced_RAG.csv — The same test queries and ground truth used for fair comparison.
 
-ragas_results.csv — Final RAGAS scores for the enhanced system.
+ragas_results.csv — Final RAGAS scores for the enhanced system. For each user query, we get we get scores for all the six RAGAS metrics: Context Relevance, Context Recall, Faithfulness, Answer Relevance, Answer Correctness, and Semantic Similarity.
 
 
 3/test_cases.py
