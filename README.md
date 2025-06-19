@@ -10,8 +10,8 @@ This repository contains the full source code, data, and evaluation results for 
  Enhanced_RAG_system/
  ┣  Enhanced_RAG.ipynb           → Full code notebook for the enhanced RAG system
  ┣  ragas_dataset_enhanced_RAG.csv  → Dataset used in RAGAS evaluation
- ┣  ragas_results.csv             → RAGAS metric results for the enhanced system
- ┗  ragas_results/                → Contains individual .json result files
+ ┗  ragas_results.csv             → RAGAS metric results for the enhanced system┗  
+
 
  Naive_RAG_system/
  ┣  Naive_RAG.ipynb               → Full code notebook for the naive RAG system
@@ -20,6 +20,7 @@ This repository contains the full source code, data, and evaluation results for 
 
  test_cases.py                    → Python script with test queries and expected answers
  README.md                        → Project summary, instructions, and structure
+
 
 ## Folder and File Descriptions:
 
