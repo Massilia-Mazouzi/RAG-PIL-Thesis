@@ -5,25 +5,21 @@ This repository contains the full source code, data, and evaluation results for 
 
 - Enhanced RAG: Metadata-aware retrieval using medication name recognition and targeted filtering.
 
-## Repository Structure:
-.
-├── Enhanced_RAG_system/
-│   ├── code/
-│   │   └── Enhanced_RAG.ipynb
-│   ├── evaluation/
-│   │   ├── ragas_dataset_enhanced_RAG.csv
-│   │   ├── ragas_results.csv
-│   │   └── ragas_results/
-│
-├── Naive_RAG_system/
-│   ├── code/
-│   │   └── Naive_RAG.ipynb
-│   ├── evaluation/
-│   │   ├── ragas_input_data_naive_rag.csv
-│   │   └── ragas_naive_results.csv
-│
-├── test_cases.py
-└── README.md
+  ## Repository Structure :
+
+ Enhanced_RAG_system/
+ ┣  Enhanced_RAG.ipynb           → Full code notebook for the enhanced RAG system
+ ┣  ragas_dataset_enhanced_RAG.csv  → Dataset used in RAGAS evaluation
+ ┣  ragas_results.csv             → RAGAS metric results for the enhanced system
+ ┗  ragas_results/                → Contains individual .json result files
+
+ Naive_RAG_system/
+ ┣  Naive_RAG.ipynb               → Full code notebook for the naive RAG system
+ ┣  ragas_input_data_naive_rag.csv → Input dataset for RAGAS evaluation
+ ┗  ragas_naive_results.csv       → RAGAS metric results for the naive system
+
+ test_cases.py                    → Python script with test queries and expected answers
+ README.md                        → Project summary, instructions, and structure
 
 ## Folder and File Descriptions:
 
