@@ -10,7 +10,7 @@ This repository contains the full source code, data, and evaluation results for 
  Enhanced_RAG_system/
  ┣  Enhanced_RAG.ipynb           → Full code notebook for the enhanced RAG system
  ┣  ragas_dataset_enhanced_RAG.csv  → Dataset used in RAGAS evaluation
- ┗  ragas_results.csv             → RAGAS metric results for the enhanced system┗  
+ ┗  ragas_results.csv             → RAGAS metric results for the enhanced system
 
 
  Naive_RAG_system/
