@@ -1,52 +1,52 @@
-# RAG-PIL-Thesis
-Supplementary code, data, and results for my Master's thesis on an AI assistant for Algerian Patient Information Leaflets.
-# An AI Assistant for Algerian Patient Information Leaflets using Retrieval-Augmented Generation
+ Overview
+This repository contains the full source code, data, and evaluation results for my Master's thesis project on an AI assistant for Algerian Patient Information Leaflets (PILs) using a Retrieval-Augmented Generation (RAG) architecture. Two RAG systems were implemented and compared:
 
-This repository contains the supplementary data, results, and source code for the Master's thesis by [Your Name], submitted to the [Your University Name] in June 2025.
+- Naive RAG: Basic chunking and semantic retrieval without filtering.
 
-## Project Abstract
+- Enhanced RAG: Metadata-aware retrieval using medication name recognition and targeted filtering.
 
-Access to clear and understandable medication information is crucial for patient safety, yet official Patient Information Leaflets (PILs) are often dense and difficult for the public to comprehend. In the Algerian context, where French-language PILs are widely used, there is a significant gap in digital tools capable of providing patients with reliable and easy-to-understand answers to their medication-related questions. This thesis addresses this gap by designing, implementing, and evaluating an intelligent assistant built on a Retrieval-Augmented Generation (RAG) architecture to serve as a trustworthy information gateway to these documents.
+## Repository Structure:
+.
+├── Enhanced_RAG_system/
+│   ├── Enhanced_RAG.ipynb
+│   ├── ragas_dataset_enhanced_RAG.csv
+│   └── ragas_results.csv          
+│
+├── Naive_RAG_system/
+│   ├── Naive_RAG.ipynb
+│   ├── ragas_input_data_naive_rag.csv
+│   └── ragas_naive_results.csv
+│
+├── test_cases.py
+└── README.md
 
-The core of this work is an enhanced RAG pipeline that introduces a dynamic metadata filtering strategy based on medication names to significantly improve the relevance and precision of the retrieved context. A quantitative evaluation using the RAGAS framework demonstrates that this approach yields substantial improvements in answer correctness (+203.7%) and context recall (+50.7%) compared to a naïve RAG baseline.
+## Folder and File Descriptions:
 
-## Repository Contents
+1/Naive_RAG_system/
+Naive_RAG.ipynb — Full implementation of the baseline RAG pipeline using MiniLM embeddings and no metadata filtering.
 
-This repository is organized as follows:
+ragas_input_data_naive_rag.csv — Test queries with reference answers and expected documents used for RAGAS evaluation.
 
-### `/results`
+ragas_naive_results.csv — Raw RAGAS metric scores for the naive system.
 
-This directory contains the raw data from the RAGAS evaluation, comparing the performance of the Naïve RAG system against the Enhanced RAG system across 45 test queries.
+2/Enhanced_RAG_system/
+Enhanced_RAG.ipynb — Final implementation of the enhanced RAG pipeline with:
 
-* `naive_results.csv`: The complete, row-by-row RAGAS evaluation scores for the baseline Naïve RAG system.
-* `enhanced_results.csv`: The complete, row-by-row RAGAS evaluation scores for the final Enhanced RAG system with metadata filtering.
+Medication name identification
 
-Each CSV file contains the following columns:
-* `question`: The input query.
-* `answer`: The generated answer from the RAG system.
-* `contexts`: The retrieved document chunks provided to the language model.
-* `ground_truth`: The manually created reference answer.
-* `answer_relevance`, `faithfulness`, `answer_correctness`, `context_recall`, `context_precision`, `answer_similarity`: The scores for each RAGAS metric.
+Metadata filtering
 
-### `/code`
+French-specific embeddings (Solon-base)
 
-This directory contains the Python source code used to build and evaluate the RAG system.
+ragas_dataset_enhanced_RAG.csv — The same test queries used for fair comparison.
 
-* `data_preprocessing.py`: Scripts for cleaning and chunking the source PIL documents.
-* `rag_pipeline.py`: The core implementation of the Naïve and Enhanced RAG pipelines using LangChain.
-* `evaluation.py`: The script used to run the RAGAS evaluation and generate the results CSV files.
-* `app.py`: The Streamlit application for the user interface.
-* `requirements.txt`: A list of all the required Python packages to run the code.
+ragas_results.csv — Final RAGAS scores for the enhanced system.
 
-## How to Cite
 
-If you use the code or data from this repository in your work, please cite the following thesis:
+3/test_cases.py
+Python script that defines test queries used in the evaluation (e.g., for debugging or batch testing).
 
-```bibtex
-@mastersthesis{,
-  author  = {},
-  title   = {An AI Assistant for Algerian Patient Information Leaflets using Retrieval-Augmented Generation},
-  school  = {},
-  year    = {2025},
-  month   = {June}
-}
+
+
+
+
